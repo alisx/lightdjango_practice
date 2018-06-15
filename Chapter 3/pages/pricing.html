@@ -1,0 +1,60 @@
+{% block context %}
+{
+    "plans":[
+        {
+            "name": "Starter",
+            "price": "Free",
+            "class": "success",
+            "features": [1]
+        },
+        {
+            "name": "Basic",
+            "price": "$10 / month",
+            "class": "danger",
+            "features": [1, 2]
+        },
+        {
+            "name": "Pro",
+            "price": "$20 / month",
+            "class": "info",
+            "features": [1, 2, 3]
+        }
+    ],
+    "features": [
+        "Feature #1",
+        "Feature #2",
+        "Feature #3"
+    ]
+}
+{% endblock %}
+
+<div class="container">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap
+            example.
+            It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        {% for plan in plans %}
+        <div class="card mb-4 box-shadow text-{{ plan.class }}">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">{{ plan.name }} Plan - {{ plan.price }}</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for feature in features %}
+                <li class="list-group-item {% if forloop.counter not in plan.features %}disabled{% endif %}">{{ feature }}</li>
+                {% endfor %}
+            </ul>
+            <div class="card-body">
+                <button type="button" class="btn btn-lg btn-block btn-{{ plan.class }}">Get started</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>{% lorem %}</p>
+        </div>
+    </div>
+</div>
