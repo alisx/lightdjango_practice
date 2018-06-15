@@ -8,7 +8,7 @@
 *代码会逐步添加*
 ## [第一章](https://github.com/alisx/lightdjango_practice/tree/master/Chapter%201)
 ## [第二章](https://github.com/alisx/lightdjango_practice/tree/master/Chapter%202)
-## [第三章 待添加](#)
+## [第三章](https://github.com/alisx/lightdjango_practice/tree/master/Chapter%203)
 ## [第四章 待添加](#)
 ## [第五章 待添加](#)
 ## [第六章 待添加](#)
